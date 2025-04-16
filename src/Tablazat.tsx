@@ -85,7 +85,7 @@ const Tablazat = () => {
   };
 
   return (
-    <div className="fixed right-0 top-0 p-4 border-2 rounded-md p-[1px] max-w-[100vh] min-w-[100vh] max-h-[100vh] min-h-[100vh] overflow-y-auto">
+    <div className="p-4 border-2 rounded-md p-[1px] overflow-y-auto">
       <div className="grid grid-cols-3 gap-4">
         {MAIN_CATEGORIES.map((mainCategory, i) => (
           <div key={i} className="space-y-2 w-full">

@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="flex bg-[#222] min-w-screen">
       <div className="w-1/2">
-        <img src={image} alt="background" />
+        <img src={image} />
       </div>
       <div className="w-1/2">
         <Tablazat />
