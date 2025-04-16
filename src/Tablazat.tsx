@@ -20,14 +20,14 @@ const SUBCATEGORIES: { [key: string]: string[] } = {
     "Városháza",
     "Autósiskola",
     "Pláza",
-    "Kórház",
+    "LS Kórház",
     "Nagykaszinó",
     "Északi kút"
   ],
-  San_Fierro: ["Kórház", "ARMY benzinkút", "Fix&Drive", "SF kaszinó"],
-  Angel_Pine: ["APMS", "Benzinkút"],
+  San_Fierro: ["SF Kórház", "ARMY benzinkút", "Fix&Drive", "SF kaszinó"],
+  Angel_Pine: ["APMS", "AP Benzinkút"],
   Palomino: ["Tó"],
-  Montgomery: ["Benzinkút", "Kórház"],
+  Montgomery: ["Benzinkút", "Montgomery kórház"],
   Blueberry: ["Zálogház", "BB kút", "SeeRing kút"],
   Bayside_Tierra: ["Piac", "Tierra benzinkút", "EQ benzinkút", "EQ kórház", "Aranybika"],
   Határ_után: ["Elhagyatott kút", "Urmatrans depó", "Mezőgazd.", "Nagyker"]
