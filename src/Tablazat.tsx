@@ -62,18 +62,20 @@ const Tablazat = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleChange = (subcategory: string) => {
-    const newTimers = {
-      ...timers,
-      [subcategory]: Date.now()
-    };
+  const handleChange = (subcategory: string, checked: boolean) => {
+    //Ha checked akkor hozzáadja az időt a subhoz, ha nem akkor kitörli az egészet a localstorageből
+    let newTimers;
+    if (checked) {
+      newTimers = {
+        ...timers,
+        [subcategory]: Date.now()
+      };
+    } else {
+      const { [subcategory]: _, ...rest } = timers;
+      newTimers = rest;
+    }
     setTimers(newTimers);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(newTimers));
-  };
-
-  const isDisabled = (subcategory: string) => {
-    const startTime = timers[subcategory];
-    return startTime !== null && Date.now() - startTime < TWO_HOURS;
   };
 
   const getRemainingTime = (subcategory: string) => {
@@ -99,14 +101,22 @@ const Tablazat = () => {
               </TableHeader>
               <TableBody>
                 {SUBCATEGORIES[mainCategory]?.map((sub, idx) => {
-                  const disabled = isDisabled(sub);
                   const remainingTime = getRemainingTime(sub);
+                  let b; //segéd változó
+                  //mivel eddig bent volt localStorage-ben az összes időpont, így le kell szűrni, hogy akkor legyen csak checked, ha megy is az idő
+                  if (remainingTime != "00:00:00") {
+                    b = true;
+                  }
                   return (
                     <TableRow key={idx}>
                       <TableCell>{sub}</TableCell>
                       <TableCell>{remainingTime}</TableCell>
                       <TableCell>
-                        <input type="checkbox" disabled={disabled} onChange={() => handleChange(sub)} />
+                        <input
+                          type="checkbox"
+                          checked={!!timers[sub] && b}
+                          onChange={(e) => handleChange(sub, e.target.checked)}
+                        />
                       </TableCell>
                     </TableRow>
                   );

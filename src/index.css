@@ -29,16 +29,7 @@ input[type="checkbox"] {
   position: relative;
 }
 
-input[type="checkbox"]:checked::after {
-  position: absolute;
-  top: -4px;
-  left: 2px;
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-}
-
-input[type="checkbox"]:disabled {
+input[type="checkbox"]:checked {
   background-color: #ff0000;
-  cursor: not-allowed;
   border: 1px solid #ff0000;
 }
