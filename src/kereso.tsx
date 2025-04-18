@@ -418,7 +418,7 @@ const Kereso = () => {
           >
             {filtered.category}
           </p>
-          <p className="whitespace-pre-line">{filtered.vers}</p>
+          <p className="whitespace-pre-line min-w-xl">{filtered.vers}</p>
         </div>
       )}
     </div>
