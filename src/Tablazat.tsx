@@ -102,11 +102,6 @@ const Tablazat = () => {
               <TableBody>
                 {SUBCATEGORIES[mainCategory]?.map((sub, idx) => {
                   const remainingTime = getRemainingTime(sub);
-                  let b; //segéd változó
-                  //mivel eddig bent volt localStorage-ben az összes időpont, így le kell szűrni, hogy akkor legyen csak checked, ha megy is az idő
-                  if (remainingTime != "00:00:00") {
-                    b = true;
-                  }
                   return (
                     <TableRow key={idx}>
                       <TableCell>{sub}</TableCell>
@@ -114,7 +109,7 @@ const Tablazat = () => {
                       <TableCell>
                         <input
                           type="checkbox"
-                          checked={!!timers[sub] && b}
+                          checked={!!timers[sub] && remainingTime !== "00:00:00"} //mivel eddig bent volt localStorage-ben az összes időpont, így le kell szűrni, hogy akkor legyen csak checked, ha megy is az idő
                           onChange={(e) => handleChange(sub, e.target.checked)}
                         />
                       </TableCell>
