@@ -1,1 +1,1 @@
-SeeMTA húsvéti eventre másfél óra alatt készült timer weboldal.+
+SeeMTA húsvéti eventre készült weboldal timerrel, térképpel és verses kereséssel.
