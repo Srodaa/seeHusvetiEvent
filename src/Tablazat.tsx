@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import Kereso from "./kereso";
 
 const MAIN_CATEGORIES = [
-  "Los_Santos",
   "San_Fierro",
   "Bayside_Tierra",
   "Határ_után",
   "Angel_Pine",
-  "Palomino",
+  "Blueberry",
   "Montgomery",
-  "Blueberry"
+  "Los_Santos",
+  "Palomino"
 ];
 const SUBCATEGORIES: { [key: string]: string[] } = {
   Los_Santos: [
@@ -18,7 +19,6 @@ const SUBCATEGORIES: { [key: string]: string[] } = {
     "Déli benzinkút",
     "Autókereskedés",
     "Városháza",
-    "Autósiskola",
     "Pláza",
     "LS Kórház",
     "Nagykaszinó",
@@ -30,7 +30,7 @@ const SUBCATEGORIES: { [key: string]: string[] } = {
   Montgomery: ["Benzinkút", "Montgo kórház"],
   Blueberry: ["Zálogház", "BB kút", "SeeRing kút"],
   Bayside_Tierra: ["Piac", "Tierra benzinkút", "EQ benzinkút", "EQ kórház", "Aranybika"],
-  Határ_után: ["Elhagyatott kút", "Urmatrans depó", "Mezőgazd.", "Nagyker"]
+  Határ_után: ["Elhagyatott kút", "Urmatrans depó", "Mezőgazd."]
 };
 
 const TWO_HOURS = 2 * 60 * 60 * 1000;
