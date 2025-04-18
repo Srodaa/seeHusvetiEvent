@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import Kereso from "./kereso";
 
 const MAIN_CATEGORIES = [
   "San_Fierro",
