@@ -33,3 +33,36 @@ input[type="checkbox"]:checked {
   background-color: #ff0000;
   border: 1px solid #ff0000;
 }
+
+.circle {
+  position: relative;
+}
+
+.circle::after, .circle::before {
+  --angle: 0deg;
+  content: '';
+  position: absolute;
+  height: 102%;
+  width: 102%;
+  background-image: conic-gradient(from var(--angle), transparent 70%, #0e4934);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  border-radius: 50%;
+  animation: 3s spin linear infinite;
+}
+
+.circle::before {
+  filter: blur(1.5rem);
+  opacity: 1.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
