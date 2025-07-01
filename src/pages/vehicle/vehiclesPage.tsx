@@ -1,9 +1,13 @@
-const Auto = () => {
+import { VehicleTable } from "./vehicleTable";
+const VehiclePage = () => {
   return (
     <>
-      <div>In progress...</div>
+      <h1>SeeMTA V4 car shop list</h1>
+      <div className="h-screen">
+        <VehicleTable />
+      </div>
     </>
   );
 };
 
-export default Auto;
+export default VehiclePage;
