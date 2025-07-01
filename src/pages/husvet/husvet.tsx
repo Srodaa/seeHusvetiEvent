@@ -2,21 +2,11 @@ import Kereso from "./kereso";
 import "./Tablazat";
 import Tablazat from "./Tablazat";
 import image from "../../assets/map_easter.png";
-import { Button } from "@/components/ui/button";
-import { Home } from "lucide-react";
-import { Link } from "react-router-dom";
-
+import { HomeButton } from "@/components/ui/homebutton";
 const Husvet = () => {
   return (
     <>
-      <Link to="../SrodaaSee/">
-        <Button
-          variant="outline"
-          className="fixed top-5 left-2 z-50 bg-slate-850 border border-gray-700 hover:bg-slate-800 hover:text-white cursor-pointer"
-        >
-          <Home></Home>
-        </Button>
-      </Link>
+      <HomeButton />
       <div id="husvetbody" className="relative w-screen">
         <div className="absolute z-50 right-[2%] bottom-[26%]">
           <Kereso />
