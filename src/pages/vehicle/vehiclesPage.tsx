@@ -1,4 +1,4 @@
-import { VehicleTable } from "./vehicleTable";
+import { VehicleTables } from "./vehicleTables";
 const VehiclePage = () => {
   return (
     <>
@@ -8,7 +8,7 @@ const VehiclePage = () => {
             <span className="text-[#3cb882] text-4xl">SeeMTA v4 </span> vehicle list and calculator
           </div>
         </h1>
-        <VehicleTable />
+        <VehicleTables />
       </div>
     </>
   );
