@@ -9,9 +9,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="SrodaaSee/" element={<HomePage />} />
-        <Route path="SrodaaSee/husvet" element={<Husvet />} />
-        <Route path="SrodaaSee/auto" element={<VehiclePage />} />
+        <Route path="seeWeboldal/" element={<HomePage />} />
+        <Route path="seeWeboldal/husvet" element={<Husvet />} />
+        <Route path="seeWeboldal/auto" element={<VehiclePage />} />
       </Routes>
     </BrowserRouter>
   );
