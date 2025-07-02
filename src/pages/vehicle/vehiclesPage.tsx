@@ -1,3 +1,4 @@
+import { HomeButton } from "@/components/ui/homebutton";
 import { VehicleTables } from "./vehicleTables";
 const VehiclePage = () => {
   return (
@@ -7,6 +8,7 @@ const VehiclePage = () => {
           <div className="py-5">
             <span className="text-[#3cb882] text-4xl">SeeMTA v4 </span> vehicle list and calculator
           </div>
+          <HomeButton />
         </h1>
         <VehicleTables />
       </div>
